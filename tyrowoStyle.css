@@ -28,13 +28,13 @@ html {
   height: 100%;
 }
 body {
-  
   color: hsla(210, 100%, 69%, 1);
   background: linear-gradient(169deg, #fb50c9 25%, #07d669 25% 75%, #1c92f5 75% 100%);
   min-height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin:0;
+  top: 3vw;
+  margin-top:0;
   padding-top: 3vw;
 }
 
@@ -57,7 +57,7 @@ body {
   z-index: 100px;
   display: flex;
   z-index: 10;
-  background-color:hsla(260, 50%, 4%, 0.9) ;
+  background-color:hsla(260, 50%, 4%, 0.94) ;
   top: 0em;
   text-decoration: none;
   justify-content: space-around;
@@ -72,7 +72,7 @@ body {
 }
 
 #navBar a:hover, #navBar a:focus {
-  color:hsl(148, 94%, 43%);
+  color:hsl(0, 0%, 95%);
 }
 a:visited {
   color:hsl(318, 96%, 65%);
@@ -128,7 +128,6 @@ header {
   height: 1em;
   font-size: 48px;
   padding-top: 0.3em;
-  padding-bottom: 0.8em;
   font-weight: bolder;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
