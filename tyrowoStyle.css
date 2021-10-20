@@ -63,10 +63,22 @@ body {
   padding-top: 3vw;
 }
 
+a:visited {
+  color:hsl(318, 96%, 65%);
+}
+a:link {
+  color: hsl(207, 92%, 54%);
+}
+a:hover, a:focus {
+  color:hsl(148, 94%, 43%);
+  text-decoration: underline;
+}
+
+
 /* nav bar css start */
 
 #navBar, #navButtons a {
-  color:hsla(150, 100%, 50%, 1);
+  color: #FFF;
 }
 
   .resizedLogo {
@@ -97,39 +109,37 @@ body {
 }
 
 #navBar a:hover, #navBar a:focus {
-  color:hsl(0, 0%, 95%);
-}
-a:visited {
-  color:hsl(318, 96%, 65%);
-}
-a:link {
-  color: hsl(207, 92%, 54%);
-}
-a:hover, a:focus {
-  color:hsl(148, 94%, 43%);
-  text-decoration: underline;
+  animation: pulseColors 8s infinite;
+  color:#3f48cc;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
-/* trying to get a nav bar animation is going terriblyyyy 
-.navAnimation {
-  opacity: 0;
-  display: flex;
-  position: relative;
-  left: -9rem;
-  max-height: 2rem;
-  width: 10rem;
-  z-index: 0;
-  background-color: hsla(0,0,0,0);
-
+@keyframes pulseColors {
+  0% { 
+    background-color: #000;
+  }
+  18% {
+    background-color: #fb50c9;
+  }
+  36% { 
+    background-color: #000;
+  }
+  54% {
+    background-color: #07d669;
+  }
+  72% {
+    background-color: #000;
+  }
+  90% {
+    background-color: #1c92f5;
+  }
+  100% {
+    background-color: #000;
+  }
 }
-.navAnimation:hover, .navAnimation:focus {
-  opacity: 1;
-}
-*/
-
 
 /* nav bar css end */
-
 
 
 /* header css start */
@@ -165,13 +175,6 @@ header {
   align-items:center;
   text-align: center;
   z-index: 50;
-}
-
-/* when I put the h1/div section into the header this started breaking
-have to figure out how to get this behind the pink again 
-tempfix by pushing it down below the pink*/
-header::after {
-  /* this used to be the diagonal green lines */
 }
 
 /* header css end  */
@@ -277,38 +280,48 @@ page turn than if you click from the tab itself, which would pull a little narro
   align-content: center;
   flex-wrap: wrap;
 }
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vw;
+  border-radius: 50%;
+  text-align: center;
+  top: 50%;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+  padding: 4vw;
+  color: hsla(0, 0%, 0%, 0.7)
+}
+.bubble a {
+  color: hsla(0, 0%, 0%, 0.7);
+}
+.bubble:hover {
+  animation: expand 1s 1 forwards;
+}
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.5);
+  }
+}
 .green {
-  background-color:hsla(150, 100%, 30%, 1);
+  background: radial-gradient(hsla(150, 100%, 30%, 0.8), hsla(150, 100%, 30%, 0.3), hsla(150, 100%, 30%, 0.2), hsla(150, 100%, 30%, 0.9), hsla(150, 100%, 30%, 0.8)) ;
+  text-shadow: 2px 2px hsla(150, 100%, 50%, 0.8);
 }
 .yellow {
-  background-color:hsla(50, 100%, 40%, 1);
+  background: radial-gradient(hsla(50, 100%, 40%, 0.8), hsla(50, 100%, 40%, 0.3), hsla(50, 100%, 40%, 0.2), hsla(50, 100%, 40%, 0.9), hsla(50, 100%, 40%, 0.8)) ;
+  text-shadow: 2px 2px yellow;
 }
 .red {
-  background-color:hsla(0, 100%, 30%, 1);
+  background: radial-gradient(hsla(0, 100%, 30%, 0.8), hsla(0, 100%, 30%, 0.3), hsla(0, 100%, 30%, 0.2), hsla(0, 100%, 30%, 0.9), hsla(0, 100%, 30%, 0.8)) ;
+  text-shadow: 2px 2px red;
 }
 .gray {
-  background-color: hsla(190, 20%, 10%, 1);
+  background: radial-gradient(hsla(190, 20%, 10%, 0.8), hsla(190, 20%, 10%, 0.3), hsla(190, 20%, 10%, 0.2), hsla(190, 20%, 10%, 0.9), hsla(190, 20%, 10%, 0.8));
+  text-shadow: 2px 2px gray;
 }
-.green, .yellow, .red, .gray {
-  
-  border-radius: 1rem;
-  padding: 1rem;
-}
-/*
-.header:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 20%;
-    bottom: 0;
-    left: 0;
-    background: red;
-    }
-}
-stack overflow before button 
-*/
-
 
 /*writing pages css start */
 .page {
@@ -426,42 +439,59 @@ ul {
 }
 /* end of counting to a million stuff */
 
-/*
-  .test {
-    display: inline-block;
-    background-image: linear-gradient(to right, #1c92f5, #f61bb9, #07d669, #1c92f5);
-    color: transparent;
-    height: 69px;
-    width: 69px;
-    */
-/*
-    NOTHING BELOW HERE WORKS
-    animation: slide 10s linear infinite;
-  }
-  @keyframes .slide{
-    0% {
-      transform: translate3d(0,0,0);
-    }
-    100%{
-      transform: translate3d(-1000px, 0, 0);
-    }
-  }*/
-  /*
-  .box {
-    width: 69px;
-    display: inline-block;
-    background-image: linear-gradient(to right, #f61bb9, #07d669, #1c92f5, #f61bb9);
-    background-position: right;
-  }
-  .space {
-    width: 69px;
-    display: inline-block;
-    background-image: linear-gradient(to right, #07d669, #1c92f5, #f61bb9, #07d669);
-    align: right;
-  }
-  */
+/*start slideshow css */
+
+.slideshowContainer {
+  box-sizing: border-box;
+  left: 10px;
+  top: 0px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+.slideshowPics {
+  box-sizing: border-box;
+  display: none;
+}
+.prevButton, .nextButton {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 69px;
+  transition: 0.5s ease;
+  border-radius: 10px;
+  user-select: none;
+}
+.prevButton:hover, .nextButton:hover {
+  text-decoration: none;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  border-radius: 10px;
+  color: white;
+}
+.nextButton {
+  right: 0;
+}
+.fade {
+  animation: fade 1.5s;
+}
+@keyframes fade {
+  from {opacity: 0.5}
+  to {opacity: 1}
+}
+
 /*
 colors I like - 
+color gradient background - 
+pink - FB50C9 - hsl(318, 96%, 65%)
+green - 07D669 - hsl(148, 94%, 43%)
+blue - 1C92F5 - hsl(207, 92%, 54%)
+background: linear-gradient(169deg, #fb50c9 25%, #07d669 25% 75%, #1c92f5 75% 100%);
+
 need to make conversions to HSL (HSLA?)
  snow leopard brown - #9d8d73 and #ac9471
  poly magenta - #f61bb9
