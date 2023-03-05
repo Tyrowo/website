@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='../../tyrowoStyle.css' type='text/css' rel='stylesheet'>
+    <!-- commenting out style section so I can see if this stylesheet will work
+    <style>
+        body {
+            font-family: 'Tyro Inked';
+            src: url='./tyroInked.otf'format('otf');
+        }
+    </style>
+    -->
+    <title>
+        TyRoWo | Count To A Million
+    </title>
+    <link rel='shortcut icon' type='img/jpg' href='../../tyFavicon.png' />
+
+    <script>function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function millionHex() {
+            for (let i = 1; i <= 1000000; i++) {
+                let currentNum = i.toString(16).toUpperCase();
+                let currentBi = i.toString(2);
+
+                for (let j = 0; j < currentNum.length; j++) {
+                    await sleep(200)
+                    document.getElementById('Hex').innerHTML += (currentNum[j]);
+                    await sleep(200)
+                    if ((currentNum.length - j - 1) % 2 == 0 && currentNum.length - j - 1 > 0) {
+                        await sleep(50);
+                        document.getElementById('Hex').innerHTML += (' ');
+                        await sleep(50);
+                    }
+                }
+                document.getElementById('Deci').innerHTML += (i);
+                document.getElementById('Bi').innerHTML += (currentBi);
+
+
+                document.getElementById('Hex').innerHTML += ('<br>');
+                document.getElementById('Hex').scrollBy(0, 1000);
+                document.getElementById('Bi').innerHTML += ('<br>');
+                document.getElementById('Bi').scrollBy(0, 1000);
+                document.getElementById('Deci').innerHTML += ('<br>');
+                document.getElementById('Deci').scrollBy(0, 1000);
+            }
+        }
+        millionHex()
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- flex box this stuff-->
+    <nav id='navBar'>
+        <div id='navButtons'> <a href='http://www.tyrowo.com'> <img src='../../Ty.png' class='resizedLogo'></a>
+        </div>
+        <div id='navButtons'> <a href='http://www.tyrowo.com'>| Home/Projects |</a> </div>
+        <div id='navButtons'> <a href='http://www.tyrowo.com/aboutme'>| About Me |</a> </div>
+        <div id='navButtons'> <a href='http://www.tyrowo.com/blog'>| Blog |</a> </div>
+        <div id='navButtons'> <a href='http://www.tyrowo.com/socialmedia'>| Social Media |</a> </div>
+    </nav>
+
+    <header> Counting to a Million</header>
+    <!-- need to test multiple different paper styles. Notebook paper is next.
+      need a setting to toggle between your favorite kind of notebook paper for the posts you make.
+      editability?
+      Maybe blog-ish functionality.
+-->
+    <p class='smolText' style='padding-left: 2em'>
+        Back when I was a kid I had this strange fascination with counting. <br>
+        I had a goal - to write out every number from 1 to a Million. <br>
+        Why? I'm not sure. I think I wanted to set a world record or something.
+        Ultimately, I gave up at about 1,000 or so. If that. <br>
+        Now that I'm learning to code, I've been trying to learn how to write numbers in hexadecimal,
+        but it's been giving me a little more trouble than binary. <br>
+        I realized that with a little bit of code I could practice learning my numbers the same way I
+        did when I was a kid- writing them out one at a time. <br>
+        and Technically since it's in my handwriting, I'll have finally accomplished my childhood goal! <br>
+        It'll take a couple days to finish, but feel free to watch lmao.
+    </p>
+
+
+    <!-- flex box inline with justify content space around-->
+    <!-- why does the flexbox justification break if I switch this from div to main??-->
+    <div class='lightBackground'>
+        <div class='linedNotebook page skinnyPage centeredText' id='Hex'>
+            <h2> Hexadecimal <br> </h2>
+        </div>
+        <div class='linedNotebook page skinnyPage centeredText' id='Deci'>
+            <h2> Decimal <br> </h2>
+        </div>
+        <div class='linedNotebook page skinnyPage centeredText' id='Bi'>
+            <h2> Binary <br> </h2>
+        </div>
+        <div class='watermarkTitle leftCol'>
+            <p>Hexadecimal</p>
+        </div>
+        <div class='watermarkTitle centerCol'>
+            <p>Decimal</p>
+        </div>
+        <div class='watermarkTitle rightCol'>
+            <p>Binary</p>
+        </div>
+
+    </div>
+
+    <!--
+        <h2 class='playButton'> Click here to start running the code! </h2>
+        we're not using play buttons yet lol
+        -->
+    </div>
+    <footer>
+        creative content and design by Tyler Crews <br> last updated 2/23/2021
+    </footer>
+</body>
+
+</html>
+
+
+<!-- 
+    notes for the other pages of the website
+    
+    portmanteau
+text based emoticon expressing earnest interest and curiosity
+make fixed img for leopard print, z-axis (does -1 work?)
+
+
+
+Hang In There!
+    spiders in spiders in spiiders
+
+
+🔊ty·ro·wo
+/ˈtīrōwō/
+
+    My handwriting is the text for this page, because I want you to see my work how I see my work.
+    in a way, this website is about me, for me. I organize it like I organize my notebooks at home (pictures)
+
+    about me -
+    Inspirations
+      I'd like to thank my mother and father, my sister and brothers, my friends and my family,
+      for always encouraging me to be myself, no matter how weird I've gotten over the years.
+      I'd thank my grandma polly for teaching me checkers, and my darlin for teaching me poker.
+      My dad first got me a gameboy with Kirby's Adventure In Dreamland, 
+      and Super Smash Bros went on to be a huge part of my childhood, so huge thanks to Masahiro Sakurai.
+      Although I had to take a break for about 12 years, I love Magic the Gathering and think Richard Garfield is a genius.
+      Although role playing hadn't ever been a big part of my childhood, huge shoutouts to Gary Gygax and Dave Arneson for creating DnD
+      Portal
+      Pokemon - Satoshi Tajiri
+      Undertale - Toby Fox
+      The Last of Us - Bruce Straley and Neil Druckmann
+      do the periods. look. big. enough.? ! loss.zip
+      Adventure Time
+      South Park 
+      any content that seizes the means of producing their own art
+      shout out to 3d printing
+    Self Taught
+    list of resources I used to learn
+    sections:
+    youtube channels {
+        thekingofcss Kevin Powell
+        that guy I was learning python from that weilin showed me
+    }
+    codecademy
+    practice problems
+    python/jss: codewars
+    css: cssbattle
+
+
+    From Scratch
+    handwriting, reference calligraphr.com
+    colors, spent a million hours in ms paint (mspaint 3d now)
+      show some of the nature color reference sheets
+    no html/css helper, created personally
+
+      ✂✂✂✂✂✂✂✂
+      ✀ ✁ ✂ ✃ ✄ ✅ ✆ ✇ ✈ ✉ ✊ ✋ ✌ ✎ ✏ ✐ ✑ ✒ ✙ ✚ ✜ ✝ ✟ ✢ ✤❤ ❥ ❦ ❧➀ ➁ ➂ ➃ ➄ ➅ ➆ ➇ ➈ ➉	
+
+-->

@@ -1,0 +1,25 @@
+had to change console logs to writes and learn how that worked
+
+needed to learn to scroll and adjust padding for visibility
+
+need to figure out how to sync with decimal and binary
+
+1. I can't figure out the the text animation I want (currently googling)
+2. when I leave my browser up in the background to let the program run, it seems like it's crashing and whiting out the page at Some point but idk when that is lmao
+3. synchronizing the hex with binary and decimal so it actually makes sense instead of having 3 counters at different speeds
+oh duh #2 is because I originally was using document.write on my first attempt to solve how to write to the html and that blanks it out , it's just not occurring until I need the gap between the third digit of hex
+
+i should really be doing this on github, huh?
+
+2/23/21
+after doing some css styling and creating notebook pages to replace the old grubby looking ones
+
+I also started doing my list of to do list upgrades-
+put on watermarks (although they don't shrink with boxes very well)
+recentered for visibility, and reduced the boxes so they'd be closer together.
+fixed padding and verbage of main paragraph
+
+
+still need to work on the code to make it write out prettier
+also need to inject commas and spaces and make sure it all syncs up right
+also need to make a blog post detailing all the work.
