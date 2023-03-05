@@ -1,0 +1,640 @@
+@font-face {
+  font-family: 'Tyro Inked';
+  src: url('./tyroInked.otf') format('otf');
+  src: url('./tyroInked.otf') format('opentype');
+  src: url('./tyroInked.woff2') format('WOFF2');
+}
+
+/* cpanel editor warned that * is notoriously slow so I need to redesign this without using asterisk */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tyro Inked';
+  font-size: 28px;
+  /*
+  color: hsla(210, 100%, 69%, 0.8);
+  background-color: #070a16; */
+  text-decoration: none;
+  scrollbar-color: hsla(190, 20%, 10%, 0) hsla(190, 20%, 10%, 1);
+}
+
+/* scrollbar applies globally */
+/*height: 0px;
+    width: 0px; old way I had it invisible */
+/*
+  ::-webkit-scrollbar {
+    
+    outline-color:hsla(190, 20%, 10%, 0);
+    color:hsla( 227, 20%, 50%, 0);
+  }
+  */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+  background-color: hsla(0, 0%, 0%, 0.85);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* end global css */
+html {
+  height: 92%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(169deg, #fb50c9 25%, #07d669 25% 75%, #1c92f5 75% 100%);
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  top: 3vw;
+  margin-top: 0;
+  padding-top: 3vw;
+}
+
+a:visited {
+  color: hsl(318, 96%, 65%);
+}
+
+a:link {
+  color: hsl(207, 92%, 54%);
+}
+
+a:hover,
+a:focus {
+  color: hsl(148, 94%, 43%);
+  text-decoration: underline;
+}
+
+
+/* nav bar css start */
+
+#navBar,
+#navButtons a {
+  color: #FFF;
+}
+
+.resizedLogo {
+  height: 1.5em;
+  width: 1.5em;
+  align-items: center;
+  display: flex;
+}
+
+#navBar {
+  width: 100%;
+  height: 2em;
+  z-index: 100px;
+  display: flex;
+  z-index: 10;
+  background-color: hsla(260, 50%, 4%, 0.94);
+  top: 0em;
+  text-decoration: none;
+  justify-content: space-around;
+  align-items: center;
+  color: hsla(210, 100%, 69%, 0.2);
+  position: fixed;
+}
+
+#navButtons {
+  display: inline-flex;
+  background-color: hsla(30, 0%, 0%, 0.9);
+  text-decoration: none;
+}
+
+#navBar a:hover,
+#navBar a:focus {
+  animation: pulseColors 8s infinite;
+  color: #3f48cc;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+@keyframes pulseColors {
+  0% {
+    background-color: #000;
+  }
+
+  18% {
+    background-color: #fb50c9;
+  }
+
+  36% {
+    background-color: #000;
+  }
+
+  54% {
+    background-color: #07d669;
+  }
+
+  72% {
+    background-color: #000;
+  }
+
+  90% {
+    background-color: #1c92f5;
+  }
+
+  100% {
+    background-color: #000;
+  }
+}
+
+/* nav bar css end */
+
+
+/* header css start */
+
+h1 {
+  text-align: center;
+  margin: 0.8rem;
+}
+
+h2 {
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: -1rem;
+}
+
+h3 {
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: -2.2rem;
+}
+
+header {
+  height: 1em;
+  color: hsla(210, 100%, 69%, 1);
+  font-size: 48px;
+  padding-top: 0.3em;
+  font-weight: bolder;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+
+  text-shadow: 3px 3px hsla(260, 5%, 20%, 0.8);
+
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 50;
+}
+
+/* header css end  */
+
+
+p {
+  padding: 1em;
+}
+
+/* pulltabs css, needs to be little corner shaped tabs to pull down to a page turning animation and link internally */
+.pullTabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  width: 80%;
+  height: 2em;
+  bottom: 20px;
+  left: 0px;
+  margin-bottom: -0.18rem;
+  text-shadow: 2px 2px 3px hsla(260, 50%, 4%, 0.9);
+}
+
+.pTab {
+  margin: auto;
+  padding: 0 1.0em;
+  height: 1.5em;
+  width: 7.0em;
+  border: 2px solid hsla(150, 100%, 50%, 1);
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.8em;
+  background: hsla(300, 69%, 50%, 1);
+  border-bottom-color: hsla(210, 100%, 69%, 1);
+  text-align: center;
+}
+
+.pullCorner {
+  position: relative;
+  right: -7.3em;
+  bottom: 50px;
+  width: 0.8em;
+  height: 0.8em;
+  border-bottom-left-radius: 0.3em;
+  border-top-right-radius: 0.8em;
+  background-color: hsla(150, 100%, 50%, 1)
+    /* transition: height 600ms ease-in;
+*/
+}
+
+.pullCorner:hover {
+  /*this idea is a work in progress lmao i want
+   to kind of grow to the bottom left 
+  as if you were starting to pull it downward */
+  /*
+  height: 1.6em;
+  transition: max-height 600ms ease-in 600ms;
+*/
+  transform: scale(2) translateX(-0.1em) translateY(0.1em);
+  /* if you pull from the corner maybe it should do a more diagonal
+page turn than if you click from the tab itself, which would pull a little narrower down. */
+}
+
+/* pulltab css ends */
+
+
+.lightBackground {
+  background-color: hsla(210, 95%, 69%, 1);
+  border-radius: 1.5em;
+  display: inline-flex;
+  max-width: 100vw;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+  z-index: -70;
+  margin: 0 2.5% 2rem 2.5%;
+  flex-wrap: wrap;
+}
+
+/* why is 4 doing the 3rd, but 3 does the second ??? */
+.lightBackground:nth-of-type(4) {
+  background-color: hsla(150, 100%, 50%, 1);
+}
+
+.lightBackground:nth-of-type(6) {
+  background-color: hsla(300, 69%, 50%, 1);
+}
+
+.smallArea {
+  height: 350px;
+  width: 350px;
+}
+
+.rounded {
+  display: inline-flex;
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+
+.divideContainer {
+  color: hsla(260, 50%, 4%, 0.9),
+}
+
+.fiftySplitContainer {
+  display: flex;
+  height: 40vw;
+}
+
+.flexContainer {
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vw;
+  border-radius: 50%;
+  text-align: center;
+  top: 50%;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+  padding: 4vw;
+  color: hsla(0, 0%, 0%, 0.7)
+}
+
+.bubble a {
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.bubble:hover {
+  animation: expand 1s 1 forwards;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.green {
+  background: radial-gradient(hsla(150, 100%, 30%, 0.8), hsla(150, 100%, 30%, 0.3), hsla(150, 100%, 30%, 0.2), hsla(150, 100%, 30%, 0.9), hsla(150, 100%, 30%, 0.8));
+  text-shadow: 2px 2px hsla(150, 100%, 50%, 0.8);
+}
+
+.yellow {
+  background: radial-gradient(hsla(50, 100%, 40%, 0.8), hsla(50, 100%, 40%, 0.3), hsla(50, 100%, 40%, 0.2), hsla(50, 100%, 40%, 0.9), hsla(50, 100%, 40%, 0.8));
+  text-shadow: 2px 2px yellow;
+}
+
+.red {
+  background: radial-gradient(hsla(0, 100%, 30%, 0.8), hsla(0, 100%, 30%, 0.3), hsla(0, 100%, 30%, 0.2), hsla(0, 100%, 30%, 0.9), hsla(0, 100%, 30%, 0.8));
+  text-shadow: 2px 2px red;
+}
+
+.gray {
+  background: radial-gradient(hsla(190, 20%, 10%, 0.8), hsla(190, 20%, 10%, 0.3), hsla(190, 20%, 10%, 0.2), hsla(190, 20%, 10%, 0.9), hsla(190, 20%, 10%, 0.8));
+  text-shadow: 2px 2px gray;
+}
+
+/*writing pages css start */
+.page {
+  display: inline-block;
+  min-height: 10em;
+  max-height: 40em;
+  width: 25em;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  color: #070a16;
+  background-color: #c7b5b5;
+  border-style: solid;
+  border-color: #d4bcb2;
+  border-top-width: 5px;
+  border-right-width: 15px;
+  border-left-width: 5px;
+  border-bottom-width: 15px;
+  border-radius: 15px;
+  overflow: auto;
+}
+
+/* want to get rounded borders in here but can't figure out how, 
+  only top left border gets rounded by default for some reason */
+.linedNotebook
+
+/*page. maybe this should be the default page?*/
+  {
+  /* page color- hsl(116, 12%, 75%)
+      blue lat lines - hsl(227, 14%, 40%)
+      red vert line - hsl(16, 35%, 57%) */
+
+  /* -45deg , transparent 0 20px,hsla(150, 69%, 50%, .2)20px 40px  green zebra to compare*/
+  background-image: repeating-linear-gradient(to right, transparent 0 59px, hsla(16, 35%, 57%) 59px 60px, transparent 60px 100%),
+    repeating-linear-gradient(to bottom, hsl(116, 12%, 93%) 0 45px, transparent 45px 98%, hsl(116, 12%, 93%) 98% 100%),
+    repeating-linear-gradient(to bottom, hsl(116, 12%, 93%) 0 39px, hsla(227, 20%, 50%, 1) 39px 40px);
+  padding-top: 0px;
+  padding-left: 75px;
+  line-height: 40px;
+  border: none;
+  background-attachment: local;
+}
+
+.linedNotebook h2 {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.dark
+
+/*page*/
+  {
+  background-color: #544b4c;
+  border-color: #5c443a;
+  overflow: hidden;
+}
+
+.skinnyPage {
+  max-width: 10em;
+}
+
+/*writing pages css end*/
+
+
+
+/* footer start */
+footer {
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  text-align: right;
+  color: hsla(210, 100%, 69%, 0.2);
+  font-size: 18px;
+  padding: 1em;
+}
+
+.smolText {
+  font-size: 20px;
+}
+
+/* footer end */
+
+/* general commands */
+.centeredText {
+  text-align: center;
+}
+
+ul {
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.playButton::onclick {}
+
+/* page specific stuff */
+
+
+/* counting to a million specific stuff */
+
+.watermarkTitle {
+  font-weight: bolder;
+  font-size: 42px;
+  color: hsla(260, 5%, 20%, 0.8);
+  transform: rotate(85deg);
+  position: fixed;
+}
+
+/* these don't really work when you shrink the window */
+.leftCol {
+  left: 7vw;
+  bottom: 9vw;
+}
+
+.centerCol {
+  left: 35vw;
+  bottom: 9vw;
+}
+
+.rightCol {
+  right: 29.5vw;
+  bottom: 9vw;
+}
+
+/* end of counting to a million stuff */
+
+/*start slideshow css */
+
+.slideshowContainer {
+  box-sizing: border-box;
+  left: 10px;
+  top: 0px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshowPics {
+  box-sizing: border-box;
+  display: none;
+}
+
+.prevButton,
+.nextButton {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 69px;
+  transition: 0.5s ease;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  text-decoration: none;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  border-radius: 10px;
+  color: white;
+}
+
+.nextButton {
+  right: 0;
+}
+
+.fade {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/*
+colors I like - 
+color gradient background - 
+pink - FB50C9 - hsl(318, 96%, 65%)
+green - 07D669 - hsl(148, 94%, 43%)
+blue - 1C92F5 - hsl(207, 92%, 54%)
+background: linear-gradient(169deg, #fb50c9 25%, #07d669 25% 75%, #1c92f5 75% 100%);
+
+need to make conversions to HSL (HSLA?)
+ snow leopard brown - #9d8d73 and #ac9471
+ poly magenta - #f61bb9
+ poly med green - #07d669
+ poly corn blue - #1c92f5
+ trans baby blue - #5bcefa
+ trans baby pink - #f5a9b8
+ light purple from codecademy -{hsl(240, 100%, 80%), #9a9bff}
+     
+
+
+reds
+  pikabless red: #763443
+  crimson: #7a0019
+  blood red: #bb0a1e
+  imperial red: #ed2939
+  DHL Magenta: #e80860
+  tulip red: #d8342b
+
+blues
+  carolina blue: #0cb7fc
+  almost-periwinkle: #82b1f3
+  kazuren grayish: #add8e6
+  just blue: #0000ff
+  DHL blue: #0a7dfe
+  Ocean blue: #0077be
+  Oceanic: #1d5a6c
+  Hawaii (pale) Turquoise: #4b8da2
+  Dark Blue: #050785
+  Burple: #5c00ff
+  good ol Cyan: #00ffff
+  dark navy: #121831
+  really dark navy: #080c1b
+  almost-black navy: #070a16
+  
+yellows
+  pikabless light: #f0f7e7
+  pikabless med: #f8e070
+  pikabless dark: #ce9e00
+  just yellow: #ffff00
+  heart yellow: #fdcb58
+  tulip yellow: #ecd853
+
+pinks
+  shiny dratini: #c480af
+  DHL: #fda7fe
+  pom pom: #e4a0f7
+  pinkier pink: #f781be
+  subs hot pink: #f06de9
+salmon pinks
+  Indian Summer: #be7868
+  soft red: #f88379
+  salmon: #ff9999
+  tulip pink: #dd55dd
+  cherry blossom pink: #e6b9da
+
+purples
+  real periwinkle: #ccccff
+  Tyler periwinkle: #e6e6fa
+  Wills periwinkle: #ccc9e0
+  glove light peri: #c4c0ce
+  lavender: #a87ae7
+  medium purple: #9370db
+  dark orchid: #9932cc
+  dark plum: #551a8b
+
+greens
+  monstera whitish green: #9cbd88
+  turquoise: #40e0d0
+  med spring green: #66fcc2
+  better green: #05ff9b
+  like dark teal: #3a9677
+  monstera light green: #58851e
+  monstera light 2: #7ca63a
+  dark grassy green: #4b7a43
+  emerald: #3cb371
+  LIT green: #00ff16
+  Forest green: #0f5504
+  Dark Green: #003100
+  dark monstera leaf green: #263e1c
+  dark monstera 2: #202d1b
+
+oranges
+  orange: #ff8c00
+  channel orange: #ff7e30
+
+poop brown: #533609
+raptor gray: #36393f
+*/
