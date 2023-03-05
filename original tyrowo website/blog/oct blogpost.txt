@@ -1,0 +1,39 @@
+17:43, 10/18/2021
+feeling: positive
+
+It's been a quite a bit since I started this coding journey. About 8 full months now. <br>
+Back end systems have dominated much of my interests, and so I haven't had any reason to update this page,
+but I'm glad for my experience in front end development working on this project. <br> I was quickly able to apply what I learned to
+create an options interface page for my google chrome extension. Like riding a bike, I suppose.
+<br><br>
+Enumerating all the things I've learned over the past 8 months would be excessive. Reading my first post definitely felt like overkill lol. But to summarize my accomplishments, 
+I'm constantly learning more about algorithms, data structures, and Javascript as a language. <br>
+<br>
+I took a month to develop and test a Google Chrome extension for my personal use, [My] Procrastination Buster. <br>
+Although I was fairly successful in implementing my vision, 
+a great deal of the functionality went totally against the Chrome's Manifest V3 design space of service workers for extensions, 
+and although it's in the Chrome Web Store now, I've had to abandon the project as it is. <br>
+What an incredible learning experience though! <br>
+Creating something and putting it into motion really cemented the once-abstract concepts of
+object oriented programming to me. Every hurdle was a great chance to learn new methods and applications for functions, and
+I think it's really beautiful to see functions like setTimeouts react to user input in ways that you don't really see when working on solely on algorithms.
+It was a great place to solidify my working knowledge of building classes, 
+implement good practices like creating smaller helper functions to keep my code dry and more legible, 
+and experiment with building recursive function calls. <br>
+I kept a nice github repository of my progress, so it was nice practice getting used to a repository system too, despite being the only contributor.
+<br><br>
+I've been pretty intimidated by the thought of dedicating time to projects, not knowing where to start. <br>
+Until recently I was convinced that all my projects need to be big and impressive works, 
+something that I can talk about at length. But I'm excited to work on something smaller next. 
+<br><br>
+I've had some minor accomplishments, too. I've worked on expanding my coding literacy by taking Codecademy courses in C#, React, and SQL. <br>
+Now that I've gotten some experience working with a "stricter" language than JS and Python it's definitely not as intimidating as I'd imagined.
+Though I still hate the idea of explicitly declaring the size of arrays. <br>
+And I've taken an approach to algorithms practice like a morning exercise routine - don't do too much and burn out, just get some reps in a different area every day.
+<br> <br>
+I'm so thankful to my family and friends that have made everything possible for me. I love you so much. <br>
+To my friends who took care of me when my ankle was recently severely injured and I was immobile for over a month,<br>
+to my friends and family who have given me a place to stay while I study and practice,<br>
+and to all my friends who I haven't yet stayed with but always promise that I can whenever I need/want to: <br>
+I owe you everything. <3 <br>
+-Tyler
