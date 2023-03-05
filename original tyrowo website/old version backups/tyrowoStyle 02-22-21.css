@@ -1,0 +1,281 @@
+@font-face {    
+  font-family: 'Tyro Inked';
+  src: url('./tyroInked.otf') format('otf');
+  src: url('./tyroInked.otf') format('opentype');
+}
+
+/* cpanel editor warned that * is notoriously slow so I need to redesign this without using asterisk */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tyro Inked';
+  font-size: 24px;
+  /*
+  color: hsla(210, 100%, 69%, 0.8);
+  background-color: #070a16; */
+  text-decoration: none;
+  }
+
+body {
+  
+  color: hsla(210, 100%, 69%, 0.8);
+  background-color: #070a16;
+}
+
+a {
+  color:hsla(150, 100%, 50%, 1);
+}
+
+  .resizedLogo {
+    height: 1.5em;
+    width: 1.5em;
+    align-items: center;
+    display: flex;
+  }
+
+ .navBar {
+  width: 100%;
+  height: 2em;
+  z-index: 100px;
+  display: flex;
+  z-index: 10;
+  background-color:hsla(260, 50%, 4%, 0.9) ;
+  top: 1em;
+  text-decoration: none;
+  justify-content: space-around;
+  align-items: center;
+  color:hsla(210, 100%, 69%, 0.2)
+  position: fixed;
+}
+.navButtons {
+  display: inline-flex;
+  background-color: hsla(30,0%,0%,0.9);
+  text-decoration: none;
+}
+
+  ::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+  }
+
+.lightBackground {
+  background-color:hsla(210, 100%, 69%, 0.8);
+  border-radius: 1.5em;
+  height: 20em;
+}
+.header {
+  height: 4em;
+  display: flex;
+  border-radius: 50px;
+ /* background-image: linear-gradient(to bottom-left, #1c92f5, #f61bb9, #07d669, #1c92f5);
+ */
+ background-color: hsla(300, 100%, 50%, 1);
+ align-content: center;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  z-index: 500;
+}
+.headTwo {
+  height: 4em;
+  display: flex;
+  position: fixed;
+  border-radius: 50px;
+ /* background-image: linear-gradient(to bottom-left, #1c92f5, #f61bb9, #07d669, #1c92f5);
+ */
+ background-color: hsla(150, 100%, 50%, 1);
+ align-content: center;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  z-index: 500;
+}
+
+h2 {
+  text-align: center;
+}
+/*
+.header:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 20%;
+    bottom: 0;
+    left: 0;
+    background: red;
+    }
+}
+stack overflow before button 
+*/
+footer {
+  display: flex;
+  align-content:center;
+  justify-content: flex-end;
+  align-items: center;
+  color: hsla(210, 100%, 69%, 0.2);
+  font-size: 18px;
+}
+
+.page {
+  display: inline-block;
+  height: 10em;
+  width: 17em;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  color: #070a16;
+  background-color: #c7b5b5;
+  border-style: solid;
+  border-color: #d4bcb2;
+  border-top-width: 5px;
+  border-right-width: 15px;
+  border-left-width: 5px;
+  border-bottom-width: 15px;
+  border-radius: 15px;
+  overflow: scroll;
+  /* want to get rounded borders in here but can't figure out how, 
+  only top left border gets rounded by default for some reason */
+.linedNotebook {
+  height: 20em
+  background-color: #080808;
+}
+}
+.dark {
+  background-color: #544b4c;
+  border-color: #5c443a;
+  overflow:hidden;
+}
+.smolText {
+  font-size: 20px;
+}
+.playButton::onclick {
+  
+}
+
+/*
+  .test {
+    display: inline-block;
+    background-image: linear-gradient(to right, #1c92f5, #f61bb9, #07d669, #1c92f5);
+    color: transparent;
+    height: 69px;
+    width: 69px;
+    */
+/*
+    NOTHING BELOW HERE WORKS
+    animation: slide 10s linear infinite;
+  }
+  @keyframes .slide{
+    0% {
+      transform: translate3d(0,0,0);
+    }
+    100%{
+      transform: translate3d(-1000px, 0, 0);
+    }
+  }*/
+  /*
+  .box {
+    width: 69px;
+    display: inline-block;
+    background-image: linear-gradient(to right, #f61bb9, #07d669, #1c92f5, #f61bb9);
+    background-position: right;
+  }
+  .space {
+    width: 69px;
+    display: inline-block;
+    background-image: linear-gradient(to right, #07d669, #1c92f5, #f61bb9, #07d669);
+    align: right;
+  }
+  */
+/*
+colors I like - 
+need to make conversions to HSL (HSLA?)
+ snow leopard brown - #9d8d73 and #ac9471
+ poly magenta - #f61bb9
+ poly med green - #07d669
+ poly corn blue - #1c92f5
+ trans baby blue - #5bcefa
+ trans baby pink - #f5a9b8
+ light purple from codecademy -{hsl(240, 100%, 80%), #9a9bff}
+     
+
+
+reds
+  pikabless red: #763443
+  crimson: #7a0019
+  blood red: #bb0a1e
+  imperial red: #ed2939
+  DHL Magenta: #e80860
+  tulip red: #d8342b
+
+blues
+  carolina blue: #0cb7fc
+  almost-periwinkle: #82b1f3
+  kazuren grayish: #add8e6
+  just blue: #0000ff
+  DHL blue: #0a7dfe
+  Ocean blue: #0077be
+  Oceanic: #1d5a6c
+  Hawaii (pale) Turquoise: #4b8da2
+  Dark Blue: #050785
+  Burple: #5c00ff
+  good ol Cyan: #00ffff
+  dark navy: #121831
+  really dark navy: #080c1b
+  almost-black navy: #070a16
+  
+yellows
+  pikabless light: #f0f7e7
+  pikabless med: #f8e070
+  pikabless dark: #ce9e00
+  just yellow: #ffff00
+  heart yellow: #fdcb58
+  tulip yellow: #ecd853
+
+pinks
+  shiny dratini: #c480af
+  DHL: #fda7fe
+  pom pom: #e4a0f7
+  pinkier pink: #f781be
+  subs hot pink: #f06de9
+salmon pinks
+  Indian Summer: #be7868
+  soft red: #f88379
+  salmon: #ff9999
+  tulip pink: #dd55dd
+  cherry blossom pink: #e6b9da
+
+purples
+  real periwinkle: #ccccff
+  Tyler periwinkle: #e6e6fa
+  Wills periwinkle: #ccc9e0
+  glove light peri: #c4c0ce
+  lavender: #a87ae7
+  medium purple: #9370db
+  dark orchid: #9932cc
+  dark plum: #551a8b
+
+greens
+  monstera whitish green: #9cbd88
+  turquoise: #40e0d0
+  med spring green: #66fcc2
+  better green: #05ff9b
+  like dark teal: #3a9677
+  monstera light green: #58851e
+  monstera light 2: #7ca63a
+  dark grassy green: #4b7a43
+  emerald: #3cb371
+  LIT green: #00ff16
+  Forest green: #0f5504
+  Dark Green: #003100
+  dark monstera leaf green: #263e1c
+  dark monstera 2: #202d1b
+
+oranges
+  orange: #ff8c00
+  channel orange: #ff7e30
+
+poop brown: #533609
+raptor gray: #36393f
+*/
